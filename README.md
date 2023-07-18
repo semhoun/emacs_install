@@ -5,11 +5,13 @@ Add
 Set
 HOME = `C:\Users\natha`
 
+Install python from the windows store
+
 In an administrator powershell
 ```bash
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
-choco install git emacs ripgrep fd jq html-tidy shellcheck pandoc editorconfig.core php composer nodejs winlibs sqlite grep python gtk-runtime shfmt
+choco install git emacs ripgrep fd jq html-tidy shellcheck pandoc editorconfig.core php composer nodejs winlibs sqlite grep gtk-runtime shfmt hunspell.portable llvm
 ```
 
 In a new administrator powershell
