@@ -4,8 +4,7 @@
 - https://emacs-lsp.github.io/lsp-mode/page/lsp-intelephense/
 - https://github.com/emacs-lsp/lsp-treemacs
 
-# HowTo
-
+# HowTo Windows
 @see https://chocolatey.org/
 
 - Add 
@@ -45,13 +44,29 @@ doom doctor
 doom run
 ```
 
-- Under Emacs
-```
-M-x all-the-icons-install-fonts
-M-x nerd-icons-install-fonts
-```
-
 - Add personnal librairies in 
 ```bash
 C:\ProgramData\chocolatey\lib\winlibs\tools\mingw64\x86_64-w64-mingw32\sys-root\mingw\include
+```
+
+# HowTo Linux
+```bash
+sudo apt-get install emacs
+sudo apt-get install jq shellcheck pandoc editorconfig php-cli nodejs sqlite3 grep shfmt hunspell llvm python3 npm libxml2-utils clang-format glslang-tools tidy ripgrep fd-find
+sudo npm install -g js-beautify stylelint dockerfile-language-server-nodejs
+
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+sudo mv composer.phar /usr/local/bin/composer
+
+git clone --depth 1 --single-branch https://github.com/doomemacs/doomemacs ~/.emacs.d
+~/.emacs.d/bin/doom install
+~/.emacs.d/bin/doom sync
+```
+
+# Emacs
+- Under Emacs
+```
+M-x nerd-icons-install-fonts
 ```
